@@ -1,0 +1,150 @@
+                                /*BASIC SETTINGS*/
+html{
+        box-sizing: border-box;
+        width: 100%;
+        height: 100vh;
+        font-family: 'Courier New', Courier, monospace;
+        background-color: rgba(236, 226, 181, 0.692);
+        color: rgba(27, 27, 27, 0.836);
+        font-size: 18px;
+    }
+*::selection {
+        background-color: rgba(163, 90, 170, 0.301);}
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgba(236, 226, 181, 0.692);
+    color: rgba(27, 27, 27, 0.836);
+    font-size: 2rem;  
+    text-transform: uppercase;
+    padding-left: 0.5rem;
+    border-left: solid rgb(0, 0, 0);
+    border-bottom: 1px inset grey;
+    border-left-width: 3px;
+}
+dt{
+    font-weight: bolder;
+    text-align: justify;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+dd{
+    text-align: justify;
+    font-size: 1.1rem;
+    background-color: rgba(238, 208, 76, 0.322);
+    padding: 4px 4px;
+    border-radius:3px;
+    margin: 0.6rem;
+}
+                                /*ROOT-GRID SETTINGS*/
+.rootgrid{
+    max-width: 100%;
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 1fr 1fr 8fr 1fr;
+    grid-template-areas: 
+        "headergrid headergrid headergrid headergrid"
+        "navbargrid navbargrid navbargrid navbargrid"
+        "maingrid maingrid maingrid maingrid"
+        "footergrid footergrid footergrid footergrid";
+}
+.headergrid{
+    grid-area: headergrid;}
+.navbargrid{
+    grid-area: navbargrid;}
+.maingrid{
+    grid-area: maingrid;}
+.footergrid{
+    grid-area: footergrid;}
+
+                                /*HEADER SETTINGS*/
+header .logo{
+    width: 100%;
+    height: min-content;
+    display: flex;
+    justify-content: center;}
+
+                                /*NAV SETTINGS*/    
+.navbar ul{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(5, 2fr);
+    padding: 0;
+}
+.navbar a{
+    display: block;
+    text-decoration: none;
+    padding: 0.8rem;
+    text-align: center;
+    color: black;
+    text-transform: uppercase;
+    border-right: 2px inset black;
+    border-bottom: 1px inset black;
+    margin: 2%;
+    border-bottom-right-radius: 2px 4px;
+}
+.navbar a:hover{
+    border-right: 3px inset black;
+    border-bottom: 2px inset black;
+    border-bottom-right-radius: 2px 4px;
+    box-shadow: 0 3px 3px rgba(104, 104, 104, 0.8);}
+
+                                /*MAIN GRID*/ 
+.main{
+    background-color: rgba(238, 214, 108, 0.185);
+    border-radius: 10px;
+    box-shadow: 0 -3px 10px rgba(153, 143, 87, 0.596);
+    padding: 1%;
+    margin: 2%;
+    display: grid;
+    grid-template-columns: 6fr 4fr;
+    grid-template-rows: auto;
+    grid-gap: 2%;
+    grid-template-areas: 
+        "mainbio mainpic"
+        "mainbio void";}
+.mainbio{
+    grid-area: mainbio;}
+.mainpic{
+    grid-area: mainpic;}
+
+                                /*MAIN SETTINGS*/ 
+.mainbio{
+    background-color: rgba(238, 214, 108, 0.185);
+    border-radius: 10px;
+    box-shadow: 0 -3px 10px rgba(153, 143, 87, 0.596);
+    padding: 1rem;
+    margin: 2%;
+    border-top: 2px inset rgba(238, 214, 108, 0.185);
+    border-left: 2px inset rgba(94, 82, 33, 0.11);
+    border-top-left-radius: 5px;
+}
+.mainpic{
+    background-color: rgba(238, 214, 108, 0.185);
+    border-radius: 10px;
+    box-shadow: 0 -3px 10px rgba(153, 143, 87, 0.596);
+    padding: 1.4rem;
+    margin: 5%;
+    border-top: 2px inset rgba(238, 214, 108, 0.185);
+    border-left: 2px inset rgba(94, 82, 33, 0.11);
+    border-top-left-radius: 5px;
+}
+.biopicimg{
+    width: 100%;
+    height: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(51, 50, 50, 0.521);
+    transform: rotate(-5deg);
+}
+/*Alimentador de TOC's*/
+.biopicimg:hover{
+    transform: rotate(0deg);
+    transition: 3s;
+}
+figcaption{
+    text-align: center;
+    font-size: smaller;
+}

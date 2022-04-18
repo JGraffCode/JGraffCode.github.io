@@ -1,0 +1,236 @@
+                                    /*misc*/
+html{
+    box-sizing: border-box;
+    width: 100%;
+    font-family: 'Anonymous Pro', monospace;
+    background-color: rgba(236, 226, 181, 0.692);
+    color: rgba(27, 27, 27, 0.836);
+    font-size: 18px;}
+
+*::selection{
+    background-color: rgba(163, 90, 170, 0.301);}
+
+h2{
+    font-family: 'Dosis','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgba(236, 226, 181, 0.692);
+    color: rgba(27, 27, 27, 0.836);
+    font-size: 1.6rem;  
+    text-transform: uppercase;
+    padding-left: 0.5rem;
+    border-left: solid rgb(0, 0, 0);
+    border-top: 1px inset grey;
+    border-left-width: 3px;}
+
+.destacada >div{
+    background-color: rgb(248, 231, 174);
+    border-bottom: 2px solid rgb(201, 159, 23);
+    border-right: 2px solid rgb(226, 195, 92);
+    box-shadow: 0 2px 10px rgba(104, 104, 104, 0.8);
+    border-radius: 10px;
+    padding: 1rem;}
+
+    .fuentenotadestacada{
+    font-size: smaller;
+    font-style: oblique;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+/* ANMIACIÓN con transition */
+.btn-notadestacada{
+    text-decoration: none;
+    text-align: center;
+    border: 1px inset black;
+    border-radius:5px;
+    color:rgba(0, 0, 0, 0.692);
+    padding: 0.3rem 0.3rem;
+    width: max-content;
+    transition: box-shadow;
+    font-weight: bold;}
+
+.btn-notadestacada:hover{
+    box-shadow: inset 11em 0 0 0 #fdd3498f;
+    transition-timing-function: ease-in-out;
+    transition-duration: 400ms;}
+
+.btn-notadestacada:visited{
+    color: rgb(11, 2, 139);}
+
+/* ANIMACION con keyframes */
+.notabttn4{
+    text-decoration: none;
+    text-align: center;
+    border: 1px inset black;
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 0.692);
+    padding: 0.3rem 0.3rem;
+    width: max-content;
+    font-weight: bold;}
+
+    .notabttn4:visited {
+        color: rgb(11, 2, 139);}
+
+.notabttn4:hover {
+    animation-name: cambiarColor;
+    animation-timing-function: ease-in-out;
+    animation-duration: 400ms;
+    animation-fill-mode: forwards;}
+
+    @keyframes cambiarColor {
+    from {box-shadow: none}
+    to {box-shadow: inset 11rem 0 0 0 #fdd3498f;}}
+
+/*HEADER SETTINGS*/
+header .logo{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;}
+
+
+/*NAV SETTINGS*/    
+.navbar ul{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 0;}
+
+.navbar a{
+    display: block;
+    text-decoration: none;
+    padding: 0.8rem;
+    font-weight: bolder;
+    text-align: center;
+    color: black;
+    text-transform: uppercase;
+    border-right: 2px inset black;
+    border-bottom: 1px inset black;
+    margin: 2%;
+    border-bottom-right-radius: 2px 4px;}
+
+.navbar a:hover{
+    border-right: 3px inset black;
+    border-bottom: 2px inset black;
+    border-bottom-right-radius: 2px 4px;
+    box-shadow: 0 3px 3px rgba(104, 104, 104, 0.8);}
+
+
+/* MAIN SECTION SETTINGS*/
+main{
+    background-color: rgba(238, 214, 108, 0.185);
+    border-radius: 10px;
+    box-shadow: 0 -3px 10px rgba(153, 143, 87, 0.596);
+    padding: 1%;
+    margin: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 2fr auto;
+    grid-gap: 2%;
+    grid-template-areas: 
+        "notadestacada1 notadestacada1"
+        "notadestacada2 notadestacada3"
+        "notadestacada4 notadestacada4"
+}
+
+/*ARTICLE 1*/
+.notadestacada1{
+    grid-area: notadestacada1;
+}
+.article1{
+    text-align: justify;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 2fr auto;
+    grid-template-rows: 6fr 2fr;
+    grid-template-areas: 
+    "notaimg1 nota1 nota1"
+    "notaimg1 nota1 nota1"
+    "notaimg1 . notabttn1"
+}
+.nota1{
+    grid-area:nota1;
+}
+.notaimg1{
+    background-image: url(../images/radio3.jpg);
+    background-size: cover;
+    grid-area: notaimg1;
+    width: 100%;
+    border-radius: 10px;
+}
+.notaimg1:hover{
+    filter: blur(3px); 
+    transition: 2s;
+}
+.notabttn1{
+    grid-area:notabttn1;}
+
+/*ARTICLE 2*/
+.notadestacada2{
+    grid-area: notadestacada2;
+    text-align: justify;
+}
+.article2{
+    text-align: justify;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 6fr auto;
+    grid-template-areas: 
+    "nota2 nota2"
+    ". notabttn2"
+}
+.nota2{
+    grid-area: nota2;
+}
+.notabttn2 {
+    grid-area: notabttn2;}
+
+/*ARTICLE 3*/
+.notadestacada3{
+    grid-area: notadestacada3;
+}
+.article3{
+    text-align: justify;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 6fr auto;
+    grid-template-areas: 
+    "nota3 nota3"
+    ". notabttn3"
+}
+.nota3 {
+    grid-area: nota3;
+}
+.notabttn3 {
+    grid-area: notabttn3;}
+
+/*ARTICLE 4*/
+.notadestacada4{
+    grid-area: notadestacada4;
+}
+.article4{
+    text-align: justify;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 2fr auto;
+    grid-template-rows: 6fr 2fr;
+    grid-template-areas: 
+    "notaimg4 nota4 nota4"
+    "notaimg4 nota4 nota4"
+    "notaimg4 . notabttn4"
+}
+.nota4{
+    grid-area:nota4;
+}
+.notaimg4{
+    background-image: url(../images/teatro.jpg);
+    grid-area: notaimg4;
+    width: 100%;
+    border-radius: 10px;  
+}
+.notaimg4:hover{
+    filter: grayscale(100%);
+    transition: 3s;
+}
+.notabttn4{
+    grid-area:notabttn4;}
+
