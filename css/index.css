@@ -1,125 +1,29 @@
-                                    /*misc*/
-html{
-    box-sizing: border-box;
-    width: 100%;
-    font-family: 'Anonymous Pro', monospace;
-    background-color: rgba(236, 226, 181, 0.692);
-    color: rgba(27, 27, 27, 0.836);
-    font-size: 18px;}
-
-*::selection{
-    background-color: rgba(163, 90, 170, 0.301);}
-
-h2{
-    font-family: 'Dosis','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: rgba(236, 226, 181, 0.692);
-    color: rgba(27, 27, 27, 0.836);
-    font-size: 1.6rem;  
-    text-transform: uppercase;
-    padding-left: 0.5rem;
-    border-left: solid rgb(0, 0, 0);
-    border-top: 1px inset grey;
-    border-left-width: 3px;}
-
-.destacada >div{
-    background-color: rgb(248, 231, 174);
-    border-bottom: 2px solid rgb(201, 159, 23);
-    border-right: 2px solid rgb(226, 195, 92);
-    box-shadow: 0 2px 10px rgba(104, 104, 104, 0.8);
-    border-radius: 10px;
-    padding: 1rem;}
-
-    .fuentenotadestacada{
-    font-size: smaller;
-    font-style: oblique;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-/* ANMIACIÓN con transition */
-.btn-notadestacada{
-    text-decoration: none;
-    text-align: center;
-    border: 1px inset black;
-    border-radius:5px;
-    color:rgba(0, 0, 0, 0.692);
-    padding: 0.3rem 0.3rem;
-    width: max-content;
-    transition: box-shadow;
-    font-weight: bold;}
-
-.btn-notadestacada:hover{
-    box-shadow: inset 11em 0 0 0 #fdd3498f;
-    transition-timing-function: ease-in-out;
-    transition-duration: 400ms;}
-
-.btn-notadestacada:visited{
-    color: rgb(11, 2, 139);}
-
-/* ANIMACION con keyframes */
-.notabttn4{
-    text-decoration: none;
-    text-align: center;
-    border: 1px inset black;
-    border-radius: 5px;
-    color: rgba(0, 0, 0, 0.692);
-    padding: 0.3rem 0.3rem;
-    width: max-content;
-    font-weight: bold;}
-
-    .notabttn4:visited {
-        color: rgb(11, 2, 139);}
-
-.notabttn4:hover {
-    animation-name: cambiarColor;
-    animation-timing-function: ease-in-out;
-    animation-duration: 400ms;
-    animation-fill-mode: forwards;}
-
-    @keyframes cambiarColor {
-    from {box-shadow: none}
-    to {box-shadow: inset 11rem 0 0 0 #fdd3498f;}}
-
-/*HEADER SETTINGS*/
-header .logo{
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;}
-
-
-/*NAV SETTINGS*/    
-.navbar ul{
-    list-style-type: none;
+            /*ROOT-GRID SETTINGS*/
+.rootgrid {
+    max-width: 100%;
+    height: 100%;
+    margin: 0;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    padding: 0;}
-
-.navbar a{
-    display: block;
-    text-decoration: none;
-    padding: 0.8rem;
-    font-weight: bolder;
-    text-align: center;
-    color: black;
-    text-transform: uppercase;
-    border-right: 2px inset black;
-    border-bottom: 1px inset black;
-    margin: 2%;
-    border-bottom-right-radius: 2px 4px;}
-
-.navbar a:hover{
-    border-right: 3px inset black;
-    border-bottom: 2px inset black;
-    border-bottom-right-radius: 2px 4px;
-    box-shadow: 0 3px 3px rgba(104, 104, 104, 0.8);}
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: repeat (4, auto);
+    grid-template-areas:
+        "headergrid headergrid headergrid headergrid"
+        "navbargrid navbargrid navbargrid navbargrid"
+        "maingrid maingrid maingrid maingrid"
+        "footergrid footergrid footergrid footergrid";}
+.headergrid {grid-area: headergrid;}
+.navbargrid {grid-area: navbargrid;}
+.maingrid {grid-area: maingrid;}
+.footergrid {grid-area: footergrid;}
 
 
-/* MAIN SECTION SETTINGS*/
-main{
+/* SECTION SETTINGS*/
+section{
     background-color: rgba(238, 214, 108, 0.185);
     border-radius: 10px;
     box-shadow: 0 -3px 10px rgba(153, 143, 87, 0.596);
-    padding: 1%;
-    margin: 5%;
+    padding: 2%;
+    margin: 2%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 2fr auto;
@@ -129,7 +33,20 @@ main{
         "notadestacada2 notadestacada3"
         "notadestacada4 notadestacada4"
 }
+.destacada>div {
+    background-color: rgb(248, 231, 174);
+    border-bottom: 2px solid rgb(201, 159, 23);
+    border-right: 2px solid rgb(226, 195, 92);
+    box-shadow: 0 2px 10px rgba(104, 104, 104, 0.8);
+    border-radius: 10px;
+    padding: 1rem;
+}
 
+.fuentenotadestacada {
+    font-size: smaller;
+    font-style: oblique;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
 /*ARTICLE 1*/
 .notadestacada1{
     grid-area: notadestacada1;
@@ -143,11 +60,9 @@ main{
     grid-template-areas: 
     "notaimg1 nota1 nota1"
     "notaimg1 nota1 nota1"
-    "notaimg1 . notabttn1"
-}
-.nota1{
-    grid-area:nota1;
-}
+    "notaimg1 . notabttn1"}
+.nota1{grid-area:nota1;}
+
 .notaimg1{
     background-image: url(../images/radio3.jpg);
     background-size: cover;
@@ -233,4 +148,3 @@ main{
 }
 .notabttn4{
     grid-area:notabttn4;}
-

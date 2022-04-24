@@ -1,0 +1,55 @@
+/* ANMIACIÓN con transition */
+.btn-notadestacada {
+    text-decoration: none;
+    text-align: center;
+    border: 1px inset rgb(0, 0, 0);
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 0.692);
+    padding: 0.3rem 0.3rem;
+    width: max-content;
+    transition: box-shadow;
+    font-weight: bold;
+}
+
+.btn-notadestacada:hover {
+    box-shadow: inset 11em 0 0 0 #fdd3498f;
+    transition-timing-function: ease-in-out;
+    transition-duration: 400ms;
+}
+
+.btn-notadestacada:visited {
+    color: rgb(11, 2, 139);
+}
+
+/* ANIMACION con keyframes en BOTÓN-NOTA 4  */
+.notabttn4 {
+    text-decoration: none;
+    text-align: center;
+    border: 1px inset rgb(0, 0, 0);
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 0.692);
+    padding: 0.3rem 0.3rem;
+    width: max-content;
+    font-weight: bold;
+}
+
+.notabttn4:visited {
+    color: rgb(11, 2, 139);
+}
+
+.notabttn4:hover {
+    animation-name: cambiarColor;
+    animation-timing-function: ease-in-out;
+    animation-duration: 400ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes cambiarColor {
+    from {
+        box-shadow: none
+    }
+
+    to {
+        box-shadow: inset 11rem 0 0 0 #fdd3498f;
+    }
+}

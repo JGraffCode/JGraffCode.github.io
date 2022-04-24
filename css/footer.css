@@ -1,0 +1,134 @@
+footer {
+    background-color: rgba(238, 214, 108, 0.185);
+    border-radius: 10px;
+    box-shadow: 0 -3px 10px rgba(153, 143, 87, 0.596);
+    padding: 1%;
+    margin: 1%;
+}
+.footercontainer{
+    background-color: rgba(238, 214, 108, 0.185);
+    border-radius: 10px;
+    box-shadow: 0 -3px 10px rgba(153, 143, 87, 0.596);
+    padding: 1%;
+    margin: 1%;
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 2%;
+    grid-template-areas:
+    "nombre redes redes"
+    "freelancer freelancer freelancer"
+    "lema lema lema";}
+
+.nombre{
+    grid-area: nombre;
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: bolder;}
+.freelancer{
+    grid-area:freelancer;
+    font-size: 1rem;
+    text-align: center;}
+.lema {
+    grid-area: lema;
+    font-size: 0.9rem;
+    text-align: center;}
+.redes{
+    grid-area: redes;}
+.menu{
+    grid-area:menu;}
+
+    .redes li{
+        display: inline;}
+.redes a{
+    text-decoration: none;
+    padding: 2%;
+}
+.icon{
+    font-size: 2rem;
+    color: rgba(0, 0, 0, 0.562);
+}
+
+.menu{
+    display: none;
+}
+
+
+
+
+
+@media all and (max-width: 599px) {
+footer {
+    background-color: rgba(238, 214, 108, 0.185);
+    border-radius: 10px;
+    box-shadow: 0 -3px 10px rgba(153, 143, 87, 0.596);
+    padding: 1%;
+    margin: 1%;
+}
+
+.footercontainer {
+    background-color: rgba(238, 214, 108, 0.185);
+    border-radius: 10px;
+    box-shadow: 0 -3px 10px rgba(153, 143, 87, 0.596);
+    padding: 1%;
+    margin: 1%;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat(5, auto);
+    grid-gap: 2%;
+    grid-template-areas:
+        "nombre "
+        "freelancer"
+        "lema "
+        "redes"
+        "menu";
+}
+
+.nombre {
+    grid-area: nombre;
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.freelancer {
+    grid-area: freelancer;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.lema {
+    grid-area: lema;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.redes {
+    grid-area: redes;
+    display: inline;
+    text-align: center;
+    }
+
+.menu {
+    grid-area: menu;
+    display: block;}
+
+.menu ul{
+    display:grid;
+    grid-template-columns: repeat(4, auto);
+    list-style-type:none;
+}
+
+.menu a{
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    border-right: 3px inset rgba(0, 0, 0, 0.582);
+    border-bottom: 2px inset rgba(0, 0, 0, 0.733);
+    border-bottom-right-radius: 2px 4px;
+    margin: 5px;
+    }
+        /*Cierre de MediaQuerry Celular*/
+}
+

@@ -1,0 +1,42 @@
+/*misc*/
+html {
+    box-sizing: border-box;
+    width: 100%;
+    font-family: 'Anonymous Pro', monospace;
+    background-color: rgba(236, 226, 181, 0.692);
+    color: rgba(27, 27, 27, 0.836);
+    font-size: 18px;
+}
+
+*::selection {
+    background-color: rgba(163, 90, 170, 0.301);
+}
+#aboutush1 {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgba(236, 226, 181, 0.692);
+    color: rgba(27, 27, 27, 0.836);
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding-left: 0.5rem;
+    border-left: solid rgb(0, 0, 0);
+    border-bottom: 1px inset grey;
+    border-left-width: 3px;
+}
+.articleh2 {
+    font-family: 'Dosis', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgba(236, 226, 181, 0.692);
+    color: rgba(27, 27, 27, 0.836);
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    padding-left: 0.5rem;
+    border-left: solid rgb(0, 0, 0);
+    border-top: 1px inset grey;
+    border-left-width: 3px;
+}
+/*HEADER SETTINGS*/
+header .logo {
+    width: 100%;
+    height: min-content;
+    display: flex;
+    justify-content: center;
+}                                
