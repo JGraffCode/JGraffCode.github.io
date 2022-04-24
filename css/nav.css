@@ -1,0 +1,27 @@
+/*NAV SETTINGS*/    
+.navbar ul{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 0;}
+
+.navbar a{
+    display: block;
+    text-decoration: none;
+    padding: 0.8rem;
+    font-weight: bolder;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    border-right: 2px inset rgb(0, 0, 0);
+    border-bottom: 1px inset rgb(0, 0, 0);
+    margin: 2%;
+    border-bottom-right-radius: 2px 4px;}
+
+.navbar a:hover{
+    border-right: 3px inset rgb(0, 0, 0);
+    border-bottom: 2px inset rgb(0, 0, 0);
+    border-bottom-right-radius: 2px 4px;
+    box-shadow: 0 3px 3px rgba(104, 104, 104, 0.8);
+background-color: #fdd3498f;}
+
