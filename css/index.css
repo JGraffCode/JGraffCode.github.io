@@ -174,6 +174,22 @@ header{
 .destacada{grid-area: container;}
 .footergrid{grid-area: footergrid;}
 
+.destacada {
+    background-color: rgba(238, 214, 108, 0.185);
+    border-radius: 10px;
+    box-shadow: 0 -3px 10px rgba(153, 143, 87, 0.596);
+    padding: 2%;
+    margin: 2%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 2fr auto;
+    grid-gap: 2%;
+    grid-template-areas:
+        "notadestacada1"
+        "notadestacada2" 
+        "notadestacada3"
+        "notadestacada4" }
+
 
     /*Cierre de MediaQuerry Tablet*/
 }
@@ -207,16 +223,49 @@ nav{
         "container";
 }
 
-.navbargrid {
-    grid-area: navbargrid;
+.destacada {
+    background-color: rgba(238, 214, 108, 0.185);
+    border-radius: 10px;
+    box-shadow: 0 -3px 10px rgba(153, 143, 87, 0.596);
+    padding: 2%;
+    margin: 2%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 2fr auto;
+    grid-gap: 2%;
+    grid-template-areas:
+        "notadestacada1"
+        "notadestacada2"
+        "notadestacada3"
+        "notadestacada4"
+}
+.notaimg1, .notaimg4{
+    display: none;
 }
 
-.container {
-    grid-area: container;
-}
+.article1{
+    text-align: justify;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 6fr 2fr;
+    grid-template-areas: 
+    "nota1"
+    "nota1"
+    "notabttn1"}
+.nota1{grid-area:nota1;}
 
-.footergrid {
-    grid-area: footergrid;}
+.article4 {
+    text-align: justify;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 6fr 2fr;
+    grid-template-areas:
+        "nota4"
+        "nota4"
+        "notabttn4";
+}
 
     /*Cierre de MediaQuerry Celular*/
 }
