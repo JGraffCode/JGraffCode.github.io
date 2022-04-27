@@ -12,7 +12,10 @@ html {
     background-color: rgba(163, 90, 170, 0.301);
 }
 #aboutush1 {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Dosis', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode',
+    Geneva,
+    Verdana,
+    sans-serif;
     background-color: rgba(236, 226, 181, 0.692);
     color: rgba(27, 27, 27, 0.836);
     font-size: 2rem;

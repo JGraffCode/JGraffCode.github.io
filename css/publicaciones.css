@@ -1,0 +1,278 @@
+/*ROOT-GRID SETTINGS*/
+.rootgrid {
+    max-width: 100%;
+    height: 100%;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: repeat (4, auto);
+    grid-template-areas:
+        "headergrid headergrid headergrid headergrid"
+        "navbargrid navbargrid navbargrid navbargrid"
+        "maingrid maingrid maingrid maingrid"
+        "footergrid footergrid footergrid footergrid";
+}
+
+.headergrid {
+    grid-area: headergrid;
+}
+
+.navbargrid {
+    grid-area: navbargrid;
+}
+
+.maingrid {
+    grid-area: maingrid;
+}
+
+.footergrid {
+    grid-area: footergrid;
+}
+
+
+/*MAIN GRID*/
+.main {
+    background-color: rgba(238, 214, 108, 0.185);
+    border-radius: 10px;
+    box-shadow: 0 -3px 10px rgba(153, 143, 87, 0.596);
+    padding: 1%;
+    margin: 2%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 2%;
+    grid-template-areas:
+        "formgrid mainpic";
+}
+
+.formgrid {
+    grid-area: formgrid;
+}
+
+.mainpic {
+    grid-area: mainpic;
+}
+
+
+/*MAIN SETTINGS*/
+.formgrid {
+    background-color: rgba(238, 214, 108, 0.185);
+    border-radius: 10px;
+    box-shadow: 0 -3px 10px rgba(153, 143, 87, 0.596);
+    padding: 1rem;
+    margin: 2%;
+    border-top: 2px inset rgba(238, 214, 108, 0.185);
+    border-left: 2px inset rgba(94, 82, 33, 0.11);
+    text-align: center;
+}
+
+
+.mainpic {
+    background-image: url(/images/publicacionesimg.jpg);
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 0 -3px 10px rgba(153, 143, 87, 0.596);
+    padding: 1rem;
+    margin: 2%;
+    border-top: 2px inset rgba(238, 214, 108, 0.185);
+    border-left: 2px inset rgba(94, 82, 33, 0.11);
+}
+
+.artilu {
+    list-style-type: none;
+    text-align: justify;
+}
+
+.artili {
+    margin: 0.6rem;
+    padding: 0.2rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.aviso{
+    border: 2px solid rgba(110, 29, 29, 0.418);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    background-color: rgba(207, 88, 88, 0.336);
+}
+
+.linklista {
+    text-decoration: none;
+    text-align: center;
+    border: 1px inset rgb(0, 0, 0);
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 0.692);
+    padding: 0.3rem 0.3rem;
+    width: max-content;
+    transition: box-shadow;
+    font-weight: bold;
+}
+
+.linklista:hover {
+    box-shadow: inset 200em 0 0 0 #fdd3498f;
+    transition-timing-function: ease-in-out;
+    transition-duration: 400ms;
+}
+
+.linklista:visited {
+    color: rgb(11, 2, 139);
+}
+
+
+
+
+/*MediaQuerry Tablet*/
+@media all and (min-width: 600px) and (max-width: 1023px) {
+
+    header {
+        display: none;
+    }
+
+    .rootgrid {
+        max-width: 100%;
+        height: 100%;
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: repeat (4, auto);
+        grid-template-areas:
+            "footergrid footergrid footergrid footergrid"
+            "navbargrid navbargrid navbargrid navbargrid"
+            "maingrid maingrid maingrid maingrid";
+    }
+
+    .headergrid {
+        grid-area: headergrid;
+    }
+
+    .navbargrid {
+        grid-area: navbargrid;
+    }
+
+    .maingrid {
+        grid-area: maingrid;
+    }
+
+    .footergrid {
+        grid-area: footergrid;
+    }
+
+
+    .main {
+        background-color: rgba(238, 214, 108, 0.185);
+        border-radius: 10px;
+        box-shadow: 0 -3px 10px rgba(153, 143, 87, 0.596);
+        padding: 1%;
+        margin: 2%;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 2%;
+        grid-template-areas:
+            "formgrid"
+            "mainpic";
+    }
+
+    .formgrid {
+        grid-area: formgrid;
+    }
+
+    .mainpic {
+        grid-area: mainpic;
+    }
+
+    .formgrid {
+        background-color: rgba(238, 214, 108, 0.185);
+        border-radius: 10px;
+        box-shadow: 0 -3px 10px rgba(153, 143, 87, 0.596);
+        padding: 1rem;
+        margin: 2%;
+        border-top: 2px inset rgba(238, 214, 108, 0.185);
+        border-left: 2px inset rgba(94, 82, 33, 0.11);
+        border-top-left-radius: 5px;
+    }
+
+    /*Cierre de MediaQuerry Tablet*/
+}
+
+/*MediaQuerry Celular*/
+@media all and (max-width: 599px) {
+    header {
+        display: none;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .rootgrid {
+        max-width: 100%;
+        height: 100%;
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: repeat (4, auto);
+        grid-template-areas:
+            "footergrid footergrid footergrid footergrid"
+            "navbargrid navbargrid navbargrid navbargrid"
+            "maingrid maingrid maingrid maingrid";
+    }
+
+    .headergrid {
+        grid-area: headergrid;
+    }
+
+    .navbargrid {
+        grid-area: navbargrid;
+    }
+
+    .maingrid {
+        grid-area: maingrid;
+    }
+
+    .footergrid {
+        grid-area: footergrid;
+    }
+
+
+    .main {
+        background-color: rgba(238, 214, 108, 0.185);
+        border-radius: 10px;
+        box-shadow: 0 -3px 10px rgba(153, 143, 87, 0.596);
+        padding: 1%;
+        margin: 2%;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 2%;
+        grid-template-areas:
+            "formgrid"
+            "mainpic";
+    }
+
+    .formgrid {
+        grid-area: formgrid;
+    }
+
+    .mainpic {
+        grid-area: mainpic;
+    }
+
+    .formgrid {
+        background-color: rgba(238, 214, 108, 0.185);
+        border-radius: 10px;
+        box-shadow: 0 -3px 10px rgba(153, 143, 87, 0.596);
+        padding: 1rem;
+        margin: 2%;
+        border-top: 2px inset rgba(238, 214, 108, 0.185);
+        border-left: 2px inset rgba(94, 82, 33, 0.11);
+        border-top-left-radius: 5px;
+    }
+
+
+    /*Cierre de MediaQuerry Celular*/
+}
