@@ -45,7 +45,7 @@
     border-left: 2px inset rgba(94, 82, 33, 0.11);
     text-align: center;}
 
-.inputs {
+.formChecker input{
     width: 90%;
     height: 2rem;
     font-size: 1.2rem;
@@ -53,7 +53,7 @@
     padding: 0.5rem;
     margin: 0.5rem;
 }
-textarea{
+.textarea{
     width: 90%;
     height: 2rem;
     font-size: 1.2rem;
@@ -72,6 +72,23 @@ textarea{
     margin: 2%;
     border-top: 2px inset rgba(238, 214, 108, 0.185);
     border-left: 2px inset rgba(94, 82, 33, 0.11);}
+
+/* js validation */
+.formChecker.valid input {
+    border: 2px solid rgb(8, 173, 22);
+}
+
+.formChecker.invalid input {
+    border: 2px solid rgb(252, 39, 39); 
+}
+
+.formgrid p{
+    color: rgb(252, 39, 39);
+    font-weight: bolder;
+}
+
+
+
 
     /*MediaQuerry Tablet*/
 @media all and (min-width: 600px) and (max-width: 1023px) {

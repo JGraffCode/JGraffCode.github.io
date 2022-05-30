@@ -41,30 +41,38 @@
             <div class="main">
                 <div class="formgrid">
                     <h2>Escríbeme:</h2>
-                    <form action="/form.php">
-                        <div>
-                            <label for="name">
-                                <input class="inputs" type="text" name="name" placeholder="Ingresa tu nombre.">
-                            </label>
-                        </div>
-                        <div>
-                            <label for="surname">
-                                <input class="inputs" type="text" placeholder="Ingresa tu apellido.">
-                            </label>
-                        </div>
-                        <div>
-                            <label for="mail">
-                                <input class="inputs" type="email" name="mail" placeholder="example@email.com" required>
-                            </label>
-                        </div>
-                        <div>
-                            <label for="comment"><textarea class="textarea" placeholder="Ingresa tu mensaje."></textarea>
-                            </label>
-                        </div>
-                        <div>
-                            <button  class="btn-notadestacada inputs" type="submit">Enviar mensaje</button>
-                        </div>
-                    </form>
+                        <form id="formulario" action="procesar.php" method="">
+                        
+                            <div class="formChecker">
+                                <label for="nombre"></label>
+                                <input id="nombre" type="text" placeholder="Ingresa tu nombre.">
+                                <p></p>
+                            </div>
+                        
+                            <div class="formChecker">
+                                <label for="apellido"></label>
+                                <input id="apellido"  type="text" placeholder="Ingresa tu apellido.">
+                                <p></p>
+                            </div>
+                        
+                            <div class="formChecker">
+                                <label for="email"></label>
+                                <input id="email"  type="email" placeholder="example@email.com">
+                                <p></p>
+                            </div>
+
+                            <div class="formChecker">
+                            <label for="comment"> </label>
+                            <textarea class="textarea" placeholder="Ingresa tu mensaje."></textarea>
+                            <p></p>
+                            </div>
+
+
+                        
+                            <button class="btn-notadestacada inputs" type="submit">Enviar mensaje</button>
+                        </form>
+
+
                 </div>
                 <div class="mainpic">
                     <div class="biopicimg"></div>
@@ -110,6 +118,8 @@
 </footer>
 
 </div>
+
+<script src="/js/app.js"></script>
 </body>
 
 </html>
